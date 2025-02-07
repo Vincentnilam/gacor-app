@@ -18,6 +18,11 @@ public class User {
 
     private String password;
 
+    @Column(nullable = false)
+    private Boolean isActive;
+
+    private String role; // USER and ADMIN atm..
+
     public Long getId() {
         return id;
     }
@@ -48,5 +53,21 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Boolean getActive() {
+        return isActive;
+    }
+
+    public void setActive(Boolean active) {
+        isActive = active;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }
